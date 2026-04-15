@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Empathy Engine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        h3 {
+            margin-top: 20px;
+            color: #333;
+        }
+        audio {
+            margin-top: 20px;
+            width: 100%;
+        }
+        .emotion-badge {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #e0e0e0;
+            border-radius: 20px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎙️ Empathy Engine</h1>
+    <form method="POST">
+        <textarea name="text" rows="5" cols="50" placeholder="Enter your text..."></textarea><br><br>
+        <button type="submit">Generate Voice</button>
+    </form>
+    
+    {% if emotion %}
+        <h3>Detected Emotion: <span class="emotion-badge">{{ emotion.upper() }}</span></h3>
+    {% endif %}
+    
+    {% if audio_file %}
+        <h3>Your Audio Output:</h3>
+        <audio controls>
+            <source src="{{ audio_file }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    {% endif %}
+</body>
+</html>
