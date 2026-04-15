@@ -1,4 +1,6 @@
 # Empathy Engine Pro 🎙️🔥
+<img width="1583" height="1343" alt="image" src="https://github.com/user-attachments/assets/b3820d72-2f4a-4448-9e75-c75a4bc2b292" />
+
 
 ## Overview
 The Empathy Engine is an AI-powered Text-to-Speech (TTS) service that dynamically modulates vocal characteristics based on detected emotions. Transform plain text into emotionally expressive audio that sounds genuinely human.
